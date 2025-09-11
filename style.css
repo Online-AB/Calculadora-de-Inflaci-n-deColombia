@@ -1,0 +1,272 @@
+/* Modern, professional, and friendly UI for Calculadora de Inflación */
+:root {
+  --primary: #283593;
+  --accent: #ff6f00;
+  --background: #f5f7fa;
+  --container-bg: #fff;
+  --text: #1a237e;
+  --header-bg: #fff;
+  --header-shadow: 0 2px 8px rgba(40,53,147,0.08);
+  --border-radius: 16px;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+}
+.header {
+  width: 100%;
+  height: 70px;
+  background: var(--header-bg);
+  box-shadow: var(--header-shadow);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.header .logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: 2px;
+  text-align: left;
+  margin: 0;
+}
+nav#mainNav {
+  display: flex;
+  align-items: center;
+  position: static;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+nav#mainNav ul {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav#mainNav ul li {
+  margin: 0;
+}
+nav#mainNav ul li a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color var(--transition);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+nav#mainNav ul li a.active,
+nav#mainNav ul li a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.burger {
+  display: none;
+}
+.main-content {
+  margin: 90px auto 0 auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: margin var(--transition);
+}
+.container {
+  background: var(--container-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 18px rgba(26, 35, 126, 0.13);
+  padding: 3rem 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  border: 2px solid var(--accent);
+  margin-top: 2rem;
+}
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+select, input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+  font-size: 1.1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+select:focus, input[type="number"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px #28359355;
+  outline: none;
+  background: #f0f4ff;
+}
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+  color: #303f9f;
+  letter-spacing: 0.5px;
+  font-size: 1.05rem;
+}
+button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.1rem;
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 900;
+  border-radius: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 6px 15px rgba(255, 111, 0, 0.18);
+  transition: background-color var(--transition), box-shadow var(--transition);
+}
+button:hover {
+  background-color: #e65100;
+  box-shadow: 0 9px 20px rgba(230, 81, 0, 0.19);
+}
+.result {
+  margin-top: 1.2rem;
+  padding: 1.1rem;
+  background: #e8eaf6;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--text);
+  box-shadow: inset 0 0 10px #7986cb22;
+  letter-spacing: 0.5px;
+}
+article {
+  margin-top: 2rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #3949ab;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+a.cta-button {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.1rem;
+  font-weight: 900;
+  color: white;
+  background-color: var(--primary);
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(40, 53, 147, 0.15);
+  transition: background-color var(--transition), box-shadow var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+a.cta-button:hover {
+  background-color: #1a237e;
+  box-shadow: 0 8px 22px rgba(26, 35, 126, 0.19);
+}
+/* Enhanced Contact Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+.contact-form label {
+  font-weight: 700;
+  color: #303f9f;
+  margin-bottom: 0.2rem;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+  font-size: 1.08rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  background: #f8fafc;
+  resize: none;
+}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px #28359333;
+  outline: none;
+  background: #f0f4ff;
+}
+.contact-form button {
+  width: 180px;
+  align-self: flex-end;
+  padding: 0.9rem 1.5rem;
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 900;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  box-shadow: 0 4px 12px rgba(255, 111, 0, 0.13);
+  transition: background-color var(--transition), box-shadow var(--transition);
+}
+.contact-form button:hover {
+  background-color: #e65100;
+  box-shadow: 0 7px 16px rgba(230, 81, 0, 0.19);
+}
+@media (max-width: 900px) {
+  .header {
+    padding: 0 1rem;
+    height: 60px;
+  }
+  .main-content {
+    margin-top: 75px;
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+  }
+  nav#mainNav ul {
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 0.5rem 0.5rem;
+  }
+  .main-content {
+    margin-top: 70px;
+    padding: 1rem 0.2rem 1rem 0.2rem;
+  }
+  nav#mainNav ul {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}

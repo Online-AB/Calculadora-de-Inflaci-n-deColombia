@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Mobile Responsiveness -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- Referrer Policy -->
+    <meta name="referrer" content="always" />
+    <!-- SEO Meta Description -->
+    <meta name="description" content="Calculadora de inflación Argentina - Una herramienta simple para conocer el impacto de la inflación en tu dinero. Ingresa valores y obtén resultados precisos al instante." />
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="calculadora de inflación, inflación Argentina, economía, poder adquisitivo, finanzas personales, cálculo de inflación" />
+    <title>Calculadora de Inflación Colombia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="header">
+      <div class="logo">Inflación Colombia</div>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="about.html">Sobre Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="privacy.html">Política de Privacidad</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main-content">
+      <div class="container">
+        <h1>Calculadora de Inflación Colombia</h1>
+        <select id="citySelector" aria-label="Seleccionar ciudad para calculadora">
+          <option value="https://calculadorade-inflacion.com/index.html" selected>Calculadora de Inflación Argentina</option>
+          <option value="https://calculadorade-inflacion.com/calculadora-ipc-chile.html">Calculadora de la inflación de Chile.</option>
+          <option value="https://calculadorade-inflacion.com/colombia.html">Calculadora de Inflación Colombia.</option>
+          <option value="https://calculadorade-inflacion.com/mexico.html">Calculadora de Inflación México.</option>
+          <option value="https://calculadorade-inflacion.com/paraguay.html">Calculadora de la inflación Paraguay.</option>
+          <option value="https://calculadorade-inflacion.com/peru.html">Calculadora de inflación de Perú.</option>
+          <option value="https://calculadorade-inflacion.com/uruguay.html">Calculadora de inflación Uruguay.</option>
+          <option value="https://calculadorade-inflacion.com/united-state.html">US Inflation Calculator.</option>
+        </select>
+        <label for="amount">Cantidad inicial (en moneda local):</label>
+        <input type="number" id="amount" min="0" step="0.01" placeholder="Ejemplo: 1000" />
+        <label for="startYear">Año inicial:</label>
+        <input type="number" id="startYear" min="1900" max="2100" placeholder="Ejemplo: 2020" />
+        <label for="endYear">Año final:</label>
+        <input type="number" id="endYear" min="1900" max="2100" placeholder="Ejemplo: 2024" />
+        <button onclick="calculateInflation()">Calcular Inflación</button>
+        <div id="result" class="result" aria-live="polite"></div>
+        <a href="https://calculadorade-inflacion.com/colombia.html" class="cta-button">Calculadora de Inflación Colombia</a>
+        <article>
+          <p>La inflación es un factor económico que afecta el poder adquisitivo del dinero. Esta calculadora permite estimar cómo la inflación puede impactar tus finanzas personales a lo largo de los años. Ingresa la cantidad inicial y los años para obtener una estimación del valor ajustado por inflación.</p>
+        </article>
+        <article class="friendly-article">
+          <h2>¿Por Qué Es Tan Importante una Calculadora de Inflación en Argentina?</h2>
+          <p>Argentina tiene una historia larga y compleja de alta inflación. Esto significa que los precios de bienes y servicios suben muy rápido, haciendo que la moneda local, el peso, pierda su valor rápidamente. Por esta razón, muchas personas en Argentina eligen ahorrar su dinero en dólares estadounidenses, ya que el dólar se considera una moneda más estable a nivel mundial.</p>
+          <p><strong>Pero aquí está la clave:</strong> incluso si la cantidad de dólares que tienes no cambia, su poder para comprar cosas en Argentina sí lo hace. Los precios de los productos y servicios en Argentina siguen subiendo en pesos, y aunque el dólar se mantenga fuerte frente a otras monedas, podría no estar siguiendo el ritmo del creciente costo de vida en el mercado local. Aquí es donde la calculadora de inflación del dólar se vuelve vital. Es una herramienta que te ayuda a ver si tus ahorros en dólares realmente te están protegiendo de la alta inflación local. Responde a una pregunta crucial: ¿mi dinero está realmente a salvo, o solo estoy viendo un número en dólares que no se mantiene al día con el costo de vida real?</p>
+          <h3>La calculadora es importante por varias razones:</h3>
+          <ul>
+            <li><strong>Proteger Ahorros:</strong> Ayuda a las personas a ver si sus ahorros en dólares realmente están creciendo o si están perdiendo valor en términos de lo que pueden comprar en Argentina.</li>
+            <li><strong>Tomar Decisiones Inteligentes:</strong> Ayuda con compras grandes, como un coche o una casa. Al ver cómo han cambiado los precios con el tiempo, puedes planificar mejor cuánto necesitas ahorrar.</li>
+            <li><strong>Comprender Inversiones:</strong> Si tienes una inversión que se paga en dólares, esta herramienta puede ayudarte a calcular el retorno real de esa inversión después de considerar la inflación de Argentina.</li>
+            <li><strong>Para Negocios:</strong> Las empresas pueden usarla para fijar precios, pagar a los empleados y gestionar sus finanzas de una manera que tome en cuenta el cambio constante en el valor del dinero.</li>
+          </ul>
+          <p>En resumen, esta calculadora ofrece una imagen clara del valor real del dólar en un país con una realidad económica muy diferente.</p>
+          <h2>¿Cómo Funciona una "Calculadora de Inflación Dólar en Argentina"?</h2>
+          <p>La forma en que funciona esta calculadora es un poco diferente a una calculadora de inflación regular. Tiene que considerar dos cosas a la vez: el valor del dólar estadounidense y la inflación de los precios en Argentina.</p>
+          <p>La mayoría de estas herramientas utilizan datos de dos fuentes principales:</p>
+          <ul>
+            <li><strong>Datos del tipo de cambio del dólar estadounidense:</strong> Esto muestra cuántos pesos argentinos puedes obtener por un dólar estadounidense en diferentes fechas. Argentina tiene muchos tipos de cambio diferentes (oficial, no oficial, etc.), y una buena calculadora a menudo te permitirá elegir cuál quieres usar.</li>
+            <li><strong>Datos de inflación de Argentina:</strong> Estos provienen de la fuente oficial del gobierno, el INDEC (Instituto Nacional de Estadística y Censos). El INDEC rastrea el Índice de Precios al Consumidor (IPC), que mide cuánto ha cambiado el precio de una "canasta" de bienes y servicios.</li>
+          </ul>
+          <p>La calculadora junta estas dos piezas de información. Aquí hay una forma simplificada de pensar en el proceso:</p>
+          <ol>
+            <li>Primero, toma tu cantidad inicial en dólares y la convierte a pesos usando el tipo de cambio de la fecha de inicio que elegiste.</li>
+            <li>Luego, utiliza los datos de inflación del INDEC para ajustar esa cantidad en pesos por toda la inflación que ha ocurrido entre la fecha de inicio y la fecha de finalización.</li>
+            <li>Finalmente, toma esa nueva cantidad ajustada en pesos y la convierte de nuevo a dólares usando el tipo de cambio de la fecha de finalización.</li>
+          </ol>
+          <p>El número final que te da es la cantidad de dólares que necesitarías hoy para tener el mismo poder adquisitivo que tenías con tus dólares originales en la fecha de inicio.</p>
+          <p><strong>Por ejemplo:</strong> digamos que tenías $1,000 en enero de 2020. La calculadora haría lo siguiente:</p>
+          <ul>
+            <li>Vería cuánto valían $1,000 en pesos en enero de 2020.</li>
+            <li>Vería cuánta inflación ha habido en Argentina desde entonces.</li>
+            <li>Calcularía cuántos pesos necesitarías hoy para tener el mismo poder adquisitivo.</li>
+            <li>Convertiría esa nueva cantidad, más grande, de pesos de vuelta a dólares usando el tipo de cambio de hoy.</li>
+          </ul>
+          <p>Este proceso te da una visión mucho más precisa del valor de tu dinero que simplemente mirar el tipo de cambio.</p>
+          <h2>La Historia del Dólar en la Economía Argentina</h2>
+          <p>Para entender realmente por qué esta calculadora es tan necesaria, ayuda saber un poco sobre la historia del dólar en Argentina.</p>
+          <p>Durante mucho tiempo, el dólar estadounidense ha sido visto como un refugio seguro frente a los problemas económicos del país. Cada vez que el peso comenzaba a perder valor rápidamente, la gente "corría al dólar" para proteger sus ahorros. Esta es una acción muy común en países con alta inflación.</p>
+          <p>Esto llevó a una situación en la que el dólar se convirtió en una especie de segunda moneda. Las personas lo usan para compras grandes como coches, casas y terrenos. A veces, incluso los servicios del día a día tienen precios en dólares, aunque pagues con pesos.</p>
+          <p>Sin embargo, el gobierno argentino a menudo ha intentado controlar cuántos dólares entran y salen del país. Esto ha creado una situación con muchos tipos de cambio diferentes:</p>
+          <ul>
+            <li><strong>El Dólar Oficial:</strong> La tasa fijada por el gobierno y utilizada para transacciones oficiales.</li>
+            <li><strong>El Dólar "Blue":</strong> La tasa de cambio no oficial o del mercado negro. Esta tasa suele ser más alta que la oficial y refleja la verdadera demanda de dólares en el país.</li>
+            <li><strong>Otras tasas:</strong> También hay tasas especiales para turistas, para ciertos tipos de exportaciones y para las personas que compran productos extranjeros con sus tarjetas de crédito.</li>
+          </ul>
+          <p>Estas diferentes tasas añaden otra capa de complejidad. Una buena calculadora de inflación del dólar en Argentina te permitirá elegir qué tipo de cambio quieres usar, dándote un resultado más preciso basado en tus necesidades específicas.</p>
+          <p>Debido a esta historia, la calculadora no es solo una herramienta financiera. Es una forma para que las personas naveguen por un sistema económico muy complejo y den sentido a los constantes cambios en el valor de su dinero.</p>
+          <h2>Cómo Usar la Calculadora para Proteger Tu Dinero</h2>
+          <p>Usar una calculadora de inflación del dólar no se trata solo de mirar al pasado. También puede ser una herramienta poderosa para planificar tu futuro. Aquí te explicamos cómo puedes usarla para tomar decisiones financieras más inteligentes:</p>
+          <ul>
+            <li><strong>Para tus Ahorros:</strong> Puedes usar la calculadora para ver si tus ahorros en dólares se mantienen al día con la inflación local. Si descubres que no es así, podría ser una buena idea considerar otras formas de hacer crecer tu dinero, como invertirlo en algo que ofrezca un mejor retorno.</li>
+            <li><strong>Para Compras Grandes:</strong> Si estás ahorrando para una casa o un coche, puedes usar la calculadora para ver cuál sería el precio de ese artículo de hace unos años en los dólares de hoy. Esto te ayuda a entender cuánto más necesitas ahorrar para alcanzar tu objetivo. Te ayuda a evitar la sorpresa de descubrir que el artículo que deseas se ha vuelto mucho más caro.</li>
+            <li><strong>Para Préstamos y Deudas:</strong> Si tienes una deuda vinculada al dólar, esta herramienta puede ayudarte a entender cómo está cambiando el valor real de esa deuda. Esto puede ser muy útil tanto para personas como para negocios.</li>
+          </ul>
+          <p>Es importante recordar que estas calculadoras se basan en datos históricos. No pueden predecir el futuro perfectamente. Sin embargo, pueden darte una muy buena idea de las tendencias y ayudarte a planificar tus finanzas de una manera que tome en cuenta el cambio constante en los precios.</p>
+        </article>
+        </article>
+      </div>
+    </div>
+    <script>
+      const selector = document.getElementById('citySelector');
+      selector.addEventListener('change', function() {
+        if (this.value) {
+          window.location.href = this.value;
+        }
+      });
+      function calculateInflation() {
+        const amount = parseFloat(document.getElementById('amount').value);
+        const startYear = parseInt(document.getElementById('startYear').value);
+        const endYear = parseInt(document.getElementById('endYear').value);
+        const resultDiv = document.getElementById('result');
+        if (!amount || !startYear || !endYear) {
+          resultDiv.textContent = 'Por favor, completa todos los campos.';
+          resultDiv.style.color = '#d32f2f';
+          return;
+        }
+        if (endYear <= startYear) {
+          resultDiv.textContent = 'El año final debe ser mayor que el año inicial.';
+          resultDiv.style.color = '#d32f2f';
+          return;
+        }
+        const years = endYear - startYear;
+        const inflationRate = 0.03; // 3% anual
+        const adjustedAmount = amount * Math.pow(1 + inflationRate, years);
+        resultDiv.style.color = '#1a237e';
+        resultDiv.textContent = `Cantidad ajustada por inflación para ${years} años: ${adjustedAmount.toFixed(2)}`;
+      }
+    </script>
+  </body>
+</html>
+
